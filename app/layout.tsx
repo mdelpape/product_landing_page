@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +17,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="bg-[white] text-black h-[75px] flex justify-between px-5 items-center uppercase absolute top-0 left-0 right-0">
+          <h1 className="text-2xl font-bold">nike | ✔</h1>
+          <div className="flex items-center gap-4">
+            <p className="text-sm font-bold">About us</p>
+            <p className="text-sm font-bold">Shop</p>
+            <p className="text-sm font-bold">Contact</p>
+          </div>
+        </div>
+        <div className=" text-black h-[75px] flex justify-between px-5 items-center uppercase absolute bottom-0 left-0 right-0">
+          <p className="text-sm font-bold">© 2024 Nike, Inc.</p>
+        </div>
+        <div className=" text-black h-[75px] flex justify-center px-5 items-center uppercase absolute bottom-[100px] left-[calc(50%-200px)] w-[400px]">
+          <h1 className="text-2xl font-bold">Nike Air Zoom Pegasus 36</h1>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
