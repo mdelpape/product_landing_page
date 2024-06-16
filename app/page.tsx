@@ -20,11 +20,11 @@ export default function Home() {
     <main className="flex flex-col bg-white">
       <Canvas
         style={{ height: "100vh" }}
-        camera={{ position: [0, 1, 5], far: 50 }}
+        camera={{ position: [0, 5, 10], far: 50 }}
         shadows
       >
         <Environment preset="night" />
-        {/* <Mirror rotation={[0, 0, 0]} position={[0, 2.5, -8]}/> */}
+        <Mirror rotation={[0, 0, 0]} position={[0, 2.5, -8]}/>
         <SoftShadows
           size={shadowConfig.size.value}
           focus={shadowConfig.focus.value}
@@ -50,16 +50,16 @@ export default function Home() {
           />
         </directionalLight>
         {/* Nike Shoe */}
-        {/* <NikeShow
-          position={[0, 0, 0]}
+        <NikeShow
+          position={[0, 2, 0]}
           rotation={[0, -Math.PI / 2, 0]}
           scale={5}
-        /> */}
-        <SodaDispenser
+        />
+        {/* <SodaDispenser
         position={[0, 0, 0]}
         rotation={[0, .5, 0]}
         scale={2}
-        />
+        /> */}
         <mesh
           position={[0, 0, 0]}
           rotation={[-Math.PI / 2, 0, 0]}

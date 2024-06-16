@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="bg-[white] text-black h-[75px] flex justify-between px-5 items-center uppercase absolute top-0 left-0 right-0">
-          <h1 className="text-2xl font-bold">delicious cola | 🥤</h1>
+          <h1 className="text-2xl font-bold">nike | ✔</h1>
           <div className="flex items-center gap-4">
             <p className="text-sm font-bold">About us</p>
             <p className="text-sm font-bold">Shop</p>
@@ -27,10 +27,10 @@ export default function RootLayout({
           </div>
         </div>
         <div className=" text-black h-[75px] flex justify-between px-5 items-center uppercase absolute bottom-0 left-0 right-0">
-          <p className="text-sm font-bold">© 2024 delicious cola, Inc.</p>
+          <p className="text-sm font-bold">© 2024 Nike, Inc.</p>
         </div>
         <div className=" text-black h-[75px] flex justify-center px-5 items-center uppercase absolute bottom-[100px] left-[calc(50%-200px)] w-[400px]">
-          <h1 className="text-2xl font-bold">cola despenser 9000</h1>
+          <h1 className="text-2xl font-bold">Nike Air Zoom Pegasus 36</h1>
         </div>
         {children}
       </body>
