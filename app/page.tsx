@@ -2,7 +2,10 @@
 
 import Image from "next/image";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, SoftShadows } from "@react-three/drei";
+import { OrbitControls, SoftShadows, Environment } from "@react-three/drei";
+
+
+import Mirror from "./components/Mirror";
 
 import NikeShow from "./components/NikeShow";
 
@@ -20,6 +23,8 @@ export default function Home() {
         camera={{ position: [0, 2, 10], far: 50 }}
         shadows
       >
+        <Environment preset="night" />
+        <Mirror rotation={[0, 0, 0]} position={[0, 1, -10]}/>
         <SoftShadows
           size={shadowConfig.size.value}
           focus={shadowConfig.focus.value}
