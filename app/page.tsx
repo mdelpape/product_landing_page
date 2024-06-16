@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, SoftShadows, Environment } from "@react-three/drei";
 
-
 import Mirror from "./components/Mirror";
 
+import SodaDispenser from "./components/SodaDispenser";
 import NikeShow from "./components/NikeShow";
 
 export default function Home() {
@@ -20,11 +20,11 @@ export default function Home() {
     <main className="flex flex-col bg-white">
       <Canvas
         style={{ height: "100vh" }}
-        camera={{ position: [0, 2, 10], far: 50 }}
+        camera={{ position: [0, 1, 5], far: 50 }}
         shadows
       >
         <Environment preset="night" />
-        <Mirror rotation={[0, 0, 0]} position={[0, 1, -10]}/>
+        {/* <Mirror rotation={[0, 0, 0]} position={[0, 2.5, -8]}/> */}
         <SoftShadows
           size={shadowConfig.size.value}
           focus={shadowConfig.focus.value}
@@ -50,13 +50,18 @@ export default function Home() {
           />
         </directionalLight>
         {/* Nike Shoe */}
-        <NikeShow
+        {/* <NikeShow
           position={[0, 0, 0]}
           rotation={[0, -Math.PI / 2, 0]}
           scale={5}
+        /> */}
+        <SodaDispenser
+        position={[0, 0, 0]}
+        rotation={[0, .5, 0]}
+        scale={2}
         />
         <mesh
-          position={[0, -2, 0]}
+          position={[0, 0, 0]}
           rotation={[-Math.PI / 2, 0, 0]}
           receiveShadow
         >
